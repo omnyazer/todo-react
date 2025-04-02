@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addTodo, toggleTodo } from "./redux/TodoSlice";
 import { selectTodos, selectCompletedTodos } from "./redux/Selectors";
+import "./App.css";
 
 const App = () => {
   const [input, setInput] = useState("");
@@ -17,7 +18,7 @@ const App = () => {
   };
 
   return (
-    <div style={{ padding: "2rem" }}>
+    <div className="app-container">
       <h1>Liste des tâches</h1>
       <input
         type="text"
